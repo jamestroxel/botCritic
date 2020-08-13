@@ -2,11 +2,16 @@
     padding: 0px;
     margin: 0px;
 }
-tr {
+td {
+    width: 100%;
+    /* display: block;
+    flex-direction: row;
+    flex-wrap: nowrap; */
     border: 0px;
-    border-bottom: 1px; 
-    border-bottom-color: lightpink; 
+    border-bottom: 5px; 
+    border-bottom-color: white; 
     border-style: solid;
+    padding-bottom: 8px;
 }
 th {
     vertical-align: bottom; 
@@ -68,8 +73,25 @@ a:hover {
 .aNav:hover {
     color:black;
 }
+.navTable {
+    background: rgb(255, 182, 193);
+    width: 100%;
+    /* display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: flex-start; */
+    list-style: none;
+    align-items: baseline;
+    position:fixed;
+    vertical-align: top;
+    margin: 0px;
+    padding: 112px;
+    padding-bottom: 0px;
+    /* box-shadow: 0px 50px 50px lightpink; */
+}
 .containerNav {
-    background: rgb(255, 182, 193, 95);
+    background: rgb(255, 182, 193);
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -342,6 +364,7 @@ input {
     border-width: 2px;
     border-color: white;
     background: pink;
+    transition: ease-in-out;
     /* cursor: pointer; */
     }
       

@@ -514,72 +514,72 @@ document.getElementById("botCritic").onclick = function() {
 ////// d3 chart ////////
 
 
-/// Table ////
-d3.select('tbody')
-.selectAll('tr')
-.data(data)
-.enter().append('tr')
-.html(function(d) {
-  return '<th class="th-border">' + d.title +
-    '</th><td class="th-border">' + d.release_date + 
-    '</td><td class="th-border">' + d.rt_score + '</td>' 
-})
+// /// Table ////
+// d3.select('tbody')
+// .selectAll('tr')
+// .data(data)
+// .enter().append('tr')
+// .html(function(d) {
+//   return '<th class="th-border">' + d.title +
+//     '</th><td class="th-border">' + d.release_date + 
+//     '</td><td class="th-border">' + d.rt_score + '</td>' 
+// })
 
 
 
-var barWidth = 22;
-    barOffset = 18
-    height = 1000
-    width = 1000
+// var barWidth = 22;
+//     barOffset = 18
+//     height = 1000
+//     width = 1000
 
 
 
-d3.select('#viz').append('svg')
-  .attr('width', height)
-  .attr('height', width)
-.selectAll('rect').data(data)
-  .enter().append('rect')
-    .style('fill', '#FFC0CB')
-    .attr('height', barWidth)
-    .attr('x', 90)
-    .attr('rx', 11)
-    .attr('ry', 11)
-    // .attr('rx', 11)
-    // .attr('ry', 11)
-    .attr('width', function(d){
-      return d.rt_score * 2;
-    })
-    .attr('y', function(d, i) {
-      return i*(barWidth + barOffset)
-    })
-    // .on('change', function(d) { 
-    //   if (d.rt_score > slider.value)
-    //   d3.select(this)
-    //     .style('opacity', 0)      
-    // })
-    // ;
-
-d3.select('#viz svg')
-  .selectAll('text')
-  .data(data)
-  .enter().append('text')
-  .text(function(d) {
-    return d.rt_score + " " +  d.title 
-  })
-  .attr('x', 95)
-  .attr('y', (d, i) => i * 40 + 16)
-  // .enter().append('text')
-  // .text(function(d) {
-  //   return d.rt_score 
-  // })
-  // .attr('x', 400)
-  // .attr('y', (d, i) => i * 40 + 16)
-
+// d3.select('#viz').append('svg')
+//   .attr('width', height)
+//   .attr('height', width)
+// .selectAll('rect').data(data)
+//   .enter().append('rect')
+//     .style('fill', '#FFC0CB')
+//     .attr('height', barWidth)
+//     .attr('x', 90)
+//     .attr('rx', 11)
+//     .attr('ry', 11)
+//     // .attr('rx', 11)
+//     // .attr('ry', 11)
+//     .attr('width', function(d){
+//       return d.rt_score * 2;
+//     })
+//     .attr('y', function(d, i) {
+//       return i*(barWidth + barOffset)
+//     })
+//     // .on('change', function(d) { 
+//     //   if (d.rt_score > slider.value)
+//     //   d3.select(this)
+//     //     .style('opacity', 0)      
+//     // })
+//     // ;
 
 // d3.select('#viz svg')
-//   .append('text')
+//   .selectAll('text')
+//   .data(data)
+//   .enter().append('text')
 //   .text(function(d) {
-//     return d.rt_score 
+//     return d.rt_score + " " +  d.title 
 //   })
-//   .attr('x', (d, i) => 500)
-//   .attr('y', (d, i) => i * 40 + 16);
+//   .attr('x', 95)
+//   .attr('y', (d, i) => i * 40 + 16)
+//   // .enter().append('text')
+//   // .text(function(d) {
+//   //   return d.rt_score 
+//   // })
+//   // .attr('x', 400)
+//   // .attr('y', (d, i) => i * 40 + 16)
+
+
+// // d3.select('#viz svg')
+// //   .append('text')
+// //   .text(function(d) {
+// //     return d.rt_score 
+// //   })
+// //   .attr('x', (d, i) => 500)
+// //   .attr('y', (d, i) => i * 40 + 16);
